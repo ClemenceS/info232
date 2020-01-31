@@ -20,7 +20,7 @@ def answer_01(data):
     """
     # TODO : standardize data
     df_scaled = df
-    df_scaled.iloc[:, :2] = (df.iloc[:,:2]-df.iloc[:,:2].mean())/df.iloc[:,:2].std()
+    df_scaled.iloc[:, :-1] = (df.iloc[:,:-1]-df.iloc[:,:-1].mean())/df.iloc[:,:-1].std()
     return scaled_data
 
 
@@ -35,7 +35,8 @@ def answer_02():
     # Wrong classifier
     #from sklearn.naive_bayes import GaussianNB
     from sklearn.neighbors import KNeighborsClassifier as sklearn_model
-    return GaussianNB
+
+    return sklearn_model
 
 
 def answer_03():
@@ -115,7 +116,7 @@ def answer_08():
          "Decision Tree", "Random Forest", "Neural Net", "AdaBoost",
          "Naive Bayes", "QDA"]
 
-    overfitting_models = ["Replace", "with", "model", "names", "from", "the",  "list", "above"]
+    overfitting_models = ['RBF SVM', 'Decision Tree', 'Random Forest']
     return overfitting_models
 
 
@@ -127,7 +128,7 @@ def answer_09():
          "Decision Tree", "Random Forest", "Neural Net", "AdaBoost",
          "Naive Bayes", "QDA"]
 
-    underfitting_models = ["Replace", "with", "model", "names", "from", "the", "list", "above"]
+    underfitting_models = ['Linear SVM', 'Naive Bayes']
     return underfitting_models
 
 
