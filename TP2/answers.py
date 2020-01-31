@@ -19,9 +19,9 @@ def answer_01(data):
 
     """
     # TODO : standardize data
-    df_scaled = df
-    df_scaled.iloc[:, :-1] = (df.iloc[:,:-1]-df.iloc[:,:-1].mean())/df.iloc[:,:-1].std()
-    return df_scaled
+    data_scaled = (data-data.mean())/data.std()
+    data_scaled.iloc[:, -1] = data.iloc[:, -1]
+    return data_scaled
 
 
 def answer_02():
